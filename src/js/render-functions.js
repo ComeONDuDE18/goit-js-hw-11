@@ -1,7 +1,7 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-export function createGallery(images, gallery) {
+export function createGalleryMarkup(images) {
   const markup = images
     .map(
       ({
@@ -22,19 +22,20 @@ export function createGallery(images, gallery) {
             loading="lazy"
           />
           <div class="image-info">
-         <p><b>Likes</b> ${likes}</p>
-        <p><b>Views</b> ${views}</p>
-        <p><b>Comments</b> ${comments}</p>
-        <p><b>Downloads</b> ${downloads}</p>
-        </div>
+            <p><b>Likes</b> ${likes}</p>
+            <p><b>Views</b> ${views}</p>
+            <p><b>Comments</b> ${comments}</p>
+            <p><b>Downloads</b> ${downloads}</p>
+          </div>
         </a>
       </li>`
     )
     .join('');
 
-  gallery.innerHTML = markup;
+  return markup;
 }
-export function schowError (errorMessage) {
+
+export function showErrorMessage(errorMessage) {
   iziToast.error({
     title: 'Error',
     message: errorMessage,
