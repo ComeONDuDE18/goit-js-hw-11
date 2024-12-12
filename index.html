@@ -6,11 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomeWork 11</title>
     <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-Dy2q2e6o.js">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-DkczhqSJ.css">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-B9kkWxtF.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-5ObWk2rO.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-DumFYO8Z.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-BH0o5Xlx.css">
   </head>
   <body>
-
+    <header>
+      <form class="search-form">
+        <input
+          type="text"
+          name="search-query"
+          class="search-input"
+          placeholder="Search images..."
+        />
+        <button type="submit" class="search-button">Search</button>
+      </form>
+    </header>
+    <main>
+      <ul class="gallery"></ul>
+      <div class="loader hidden">Loading...</div>
+    </main>
+    
   </body>
 </html>
